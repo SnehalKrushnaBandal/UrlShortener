@@ -103,7 +103,7 @@ const server = createServer(async (req, res) => {
   }
 });
 
-const port = 3003;
+const port = process.env.PORT || 3003;
 server.listen(port, '0.0.0.0', () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
